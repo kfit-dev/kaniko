@@ -1,3 +1,3 @@
-FROM kaniko:debug-v0.19.0
+FROM kaniko
 
 RUN ln -s /busybox/sh /bin/sh
