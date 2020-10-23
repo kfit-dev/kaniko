@@ -1,11 +1,10 @@
-FROM gcr.io/kaniko-project/executor
+FROM gcr.io/kaniko-project/executor:v1.2.0
 FROM alpine
 
 COPY --from=0 /kaniko/executor /kaniko/executor
 COPY --from=0 /kaniko/docker-credential-gcr /kaniko/docker-credential-gcr
 COPY --from=0 /kaniko/docker-credential-ecr-login /kaniko/docker-credential-ecr-login
 COPY --from=0 /kaniko/docker-credential-acr /kaniko/docker-credential-acr
-COPY --from=0 /kaniko/docker-credential-acr-env /kaniko/docker-credential-acr-env
 COPY --from=0 /kaniko/ssl/certs/ /kaniko/ssl/certs/
 COPY --from=0 /kaniko/.docker /kaniko/.docker
 COPY --from=0 /etc/nsswitch.conf /etc/nsswitch.conf
