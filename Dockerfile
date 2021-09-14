@@ -1,4 +1,4 @@
-FROM gcr.io/kaniko-project/executor:v0.16.0
+FROM gcr.io/kaniko-project/executor:v1.6.0
 FROM alpine
 
 COPY --from=0 /kaniko/executor /kaniko/executor
