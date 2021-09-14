@@ -6,7 +6,7 @@ COPY --from=0 /kaniko/docker-credential-gcr /kaniko/docker-credential-gcr
 COPY --from=0 /kaniko/docker-credential-ecr-login /kaniko/docker-credential-ecr-login
 COPY --from=0 /kaniko/docker-credential-acr /kaniko/docker-credential-acr
 COPY --from=0 /kaniko/ssl/certs/ /kaniko/ssl/certs/
-COPY --from=0 /kaniko/.docker/config.json /kaniko/.docker/config.json
+COPY --from=0 /kaniko/.docker /kaniko/.docker
 
 ENV HOME /root
 ENV USER root
