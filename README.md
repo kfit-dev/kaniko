@@ -33,7 +33,7 @@ After each command, we append a layer of changed files to the base image (if the
 
 ```
 git checkout -b release/v1.x.x
-update [Dockerfile](https://github.com/kfit-dev/kaniko/blob/e3eb17cbdc6b81587350b6f89847612246dc6b12/Dockerfile#L1) image tag
+update Dockerfile line 1 image tag
 git commit -am "update: kaniko v1.x.x"
 git push --atomic origin release/v1.x.x v1.x.x
 updated docker image will be build and push to https://github.com/orgs/kfit-dev/packages/container/package/kaniko
